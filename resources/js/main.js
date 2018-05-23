@@ -85,7 +85,7 @@ $(document).ready(function() {
 
 		$('#productDialog').modal('show');
 		$('#productDialogTitle').html(productName);
-		$('#productDialogDescr').html(productDescription)
+		$('#productDialogDescr').html(productDescription);
 	});
 });
 
