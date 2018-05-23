@@ -1,0 +1,49 @@
+@import "_mixins.scss";
+@include font-face(AvenirNext-Medium, fonts/AvenirNext-Medium);
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: AvenirNext-Medium, Helvetica, Sans-Serif;
+    letter-spacing: 1px;
+}
+.container {
+    padding: 30px 0px 60px 0px;
+    .center {
+        text-align: center;
+    } 
+    .heading {
+        margin: 5% auto;
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    .search-input {
+        &:focus {
+        outline: none;
+        box-shadow: none;
+        }
+    }
+    .table {
+        th {
+            font-weight: normal;
+        }
+        td:nth-of-type(3) {
+            width: 46%;
+        }
+    }
+}
+.modal-content {
+    .close {
+        outline: none;
+    }
+}
+  
+  
+  
+  
+  
