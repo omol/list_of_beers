@@ -1,7 +1,11 @@
 {
   "name": "list_of_beers",
   "version": "1.0.0",
-  "description": "",
+  "description": "beers menu",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/omol/list_of_beers.git"
+  },
   "main": "main.js",
   "dependencies": {
     "browser-sync": "^2.24.4",
