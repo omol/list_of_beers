@@ -16,14 +16,16 @@
     </head>
     <body>
         <main class="container">
-            <h2 class="center heading">List of Beers</h2>
+            <section class="head-section">
+                <h2 class="center heading">List of Beers</h2>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="beerSpan"><i class="fas fa-beer"></i></span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="beerSpan"><i class="fas fa-beer"></i></span>
+                    </div>
+                    <input type="text" class="form-control search-input" aria-describedby="beerSpan" id="beerSearch" placeholder="Filter by name">
                 </div>
-                <input type="text" class="form-control search-input" aria-describedby="beerSpan" id="beerSearch" placeholder="Filter by name">
-            </div>
+            </section>
             
             <table class="table table-hover" id="beer-table">
                 <thead>
@@ -41,23 +43,35 @@
         </main>
       
         <!-- Modal -->
-        <div class="modal fade" id="productDialog" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="productDialogTitle"> </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="productDialogDescr"></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Good to know  <i class="fas fa-beer"></i></button>
+        <section class="modal-section">
+            <div class="modal fade" id="productDialog" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="product-name" id="productDialogTitle"> </h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">                        
+                            <div class="img-wrap" id="imgWrapper"></div>
+                                <div class="product-details">
+                                <p class="prod-descr" id="productDialogDescr"></p>
+                                <p>IBU: <span id="ibu" class="number"></span></p>
+                                <p>ABV: <span id="abv" class="number"></span></p>
+                                <div class="triangle triangle-down"></div>
+                                <div class="triangle triangle-white"></div>
+                                <div class="arrow arrow-first"></div>
+                                <div class="arrow arrow-sec"></div>
+                                <div class="arrow arrow-last"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary modal-button" data-dismiss="modal">Good to know &nbsp;<i class="fas fa-beer"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
+        </section>
 	    <!-- CDN's -->
         <script src="resources/js/vendor/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

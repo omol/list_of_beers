@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	var beers;
 	var asc = true;
@@ -13,7 +12,8 @@ $(document).ready(function() {
 			type: "GET"
 		})
 			.done(function(res){
-				beers = res;
+				beers = res; 
+				console.log(beers);
 			$('#beer-table tbody tr').remove();
 				$.each(beers, function(index, beer) {
 					var newEl = $('#beer-table tbody').append($('<tr id="product_'+ beer.id +'" class="product" data-name="' + beer.name + '" data-descr="' + beer.description + '"><td>' + beer.id +'</td><td>' + beer.name + '</td><td>' + beer.tagline + '</td><td>' + beer.ibu + '</td><td>' + beer.abv + '</td></tr>'));
@@ -77,15 +77,22 @@ $(document).ready(function() {
 
 	//Open & fill in modal data
 	$('body').on('click', '.product', function() {
+		$('img').remove();
+		var img = new Image();
 		var product = $(this)[0],
 		productId = product.id,
 		currentBeer = beers.find(el => 'product_' + el.id === product.id),
 		productName = currentBeer.name,
+		ibu = currentBeer.ibu,
+		abv = currentBeer.abv,
 		productDescription = currentBeer.description;
-
+		img.src = currentBeer.image_url;
+		$('#imgWrapper').prepend(img);
 		$('#productDialog').modal('show');
 		$('#productDialogTitle').html(productName);
 		$('#productDialogDescr').html(productDescription);
+		$('#ibu').html(ibu);
+		$('#abv').html(abv);  
 	});
 });
 

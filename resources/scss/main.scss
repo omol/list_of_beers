@@ -1,5 +1,8 @@
 @import "_mixins.scss";
-@include font-face(AvenirNext-Medium, fonts/AvenirNext-Medium);
+@include font-face(AvenirNext-Medium, fonts/AvenirNext-Medium); 
+* {
+    box-sizing: border-box;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -11,37 +14,129 @@ html, body {
     height: 100%;
     font-family: AvenirNext-Medium, Helvetica, Sans-Serif;
     letter-spacing: 1px;
-}
-.container {
-    padding: 30px 0px 60px 0px;
-    .center {
-        text-align: center;
-    } 
-    .heading {
-        margin: 5% auto;
-        font-size: 35px;
-        letter-spacing: 3px;
-    }
-    .search-input {
-        &:focus {
-        outline: none;
-        box-shadow: none;
+    .container {
+        padding: 30px 0px 60px 0px;
+        .center {
+            text-align: center;
+        } 
+        .heading {
+            margin: 5% auto;
+            font-size: 35px;
+            letter-spacing: 3px;
+        }
+        .search-input {
+            &:focus {
+            outline: none;
+            box-shadow: none;
+            }
+        }
+        .table {
+            th {
+                font-weight: normal;
+                i {
+                    cursor: pointer;
+                }
+            }
+            tr td {
+                cursor: pointer;
+            }
+            td:nth-of-type(3) {
+                width: 46%;
+            }
         }
     }
-    .table {
-        th {
-            font-weight: normal;
+    .modal-content {
+        .close {
+            outline: none;
+            color: black;
         }
-        td:nth-of-type(3) {
-            width: 46%;
+        .modal-body {
+            display: flex;
+            align-items: center;
+            padding: 30px 16px 25px 16px;
+            .img-wrap {
+                width: 30%;
+                height: 300px;
+                float:  left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-width: 100%;
+                    max-height:  100%;
+                    width: auto;
+                    vertical-align: middle;
+                    padding: 0px 20px;
+                }
+            }
+            .product-details {
+                float: right;
+                width: 70%;
+                min-height: 300px;
+                border-left: 2px solid rgba(0, 0, 0, 0.65);
+                padding: 15px 25px 0px 30px;
+                position: relative;
+                .prod-descr {
+                    &::first-letter {
+                        font-weight: 600;
+                        font-size: 19px;
+                    }
+                }
+                .number {
+                    font-weight: 600;
+                }
+                div.arrow {
+                    display: inline-block;
+                    position: absolute;
+                    content: "";
+                    left: -13px;
+                    margin-left: 4px;
+                    width: 16px;
+                    height: 16px;
+                    transform: rotate(45deg);
+                    border-right: 2px solid rgba(0,0,0,1);
+                    border-bottom: 2px solid rgba(0,0,0,1);
+                    &.arrow-first {
+                        top: -16px;
+                    }
+                    &.arrow-sec {
+                        top: -7px;
+                    }
+                    &.arrow-last{
+                        top: 1px;
+                    }
+                }
+                .triangle {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    &.triangle-down {
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 16px solid rgba(0, 0, 0, 0.9); 
+                        left: -9px;
+                        bottom: -6px;
+                    }
+                    &.triangle-white {
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        border-top: 9px solid rgba(255, 255, 255, 1); 
+                        left: -5px;
+                        bottom: -1px;
+                    }
+                }
+            }
         }
+        .modal-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+        
     }
 }
-.modal-content {
-    .close {
-        outline: none;
-    }
-}
+
+
   
   
   
