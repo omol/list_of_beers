@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "beers menu",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/omol/list_of_beers.git"
+    "type": "git",
+    "url": "https://github.com/omol/list_of_beers.git"
   },
   "main": "main.js",
   "dependencies": {
@@ -15,11 +15,16 @@
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "hoek": "^4.2.1",
+    "tunnel-agent": "^0.6.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "jshint": "^2.9.5"
+    "gulp": "^4.0.0",
+    "gulp-serve": "^1.4.0",
+    "jshint": "^2.9.5",
+    "lodash": "^4.17.10",
+    "minimatch": "^3.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
