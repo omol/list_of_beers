@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+jslint = require('gulp-jslint'),
 cleanCSS = require('gulp-clean-css'),
 rename = require('gulp-rename'),
 notify = require('gulp-notify'),
@@ -20,10 +21,15 @@ gulp.task('default', function () {
     .pipe(gulp.dest('resources/css'))
     .pipe(notify("CSS is ready!"))
     .pipe(livereload())
-    .pipe(livereload({stream: true}));
+    .pipe(livereload({stream: true}))
+    //JSlint included, but commented because it doesn't allow to use $(this) and arrow functions
+    // gulp.src(['resources/js/main.js'])
+    //         .pipe(jslint())
+    //         .pipe(jslint.reporter('default'));
 });
 
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('resources/scss/main.scss', ['default']);
 });
+

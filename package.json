@@ -12,18 +12,15 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-cli": "^2.0.1",
+    "gulp-jslint": "^1.0.10",
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
-    "hoek": "^4.2.1",
-    "tunnel-agent": "^0.6.0"
+    "gulp-sass": "^4.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-serve": "^1.4.0",
-    "jshint": "^2.9.5",
-    "lodash": "^4.17.10",
     "minimatch": "^3.0.4"
   },
   "scripts": {
